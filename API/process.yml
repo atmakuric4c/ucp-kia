@@ -1,0 +1,7 @@
+apps:
+  - script : './app.js'
+    cwd    : '/app/API/'
+    name   : 'APP'
+  - script : './azure_schedular.js'
+    cwd    : '/app/API/'
+    name   : 'AZURE-SCHEDULAR'

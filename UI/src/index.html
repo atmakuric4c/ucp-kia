@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ITS Universal Cloud Platform</title>
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./src/css/app.css" />
+    <link rel="stylesheet" href="./src/css/react-datepicker.css" />
+    <link rel="stylesheet" href="./src/css/login.css" /> 
+    <link rel="stylesheet" href="./src/css/style.css" /> 
+    <link rel="stylesheet" href="./src/css/material.css" /> 
+    <link rel="stylesheet" href="./src/css/customcss_new_layout.css" /> 
+    <link rel="stylesheet" href="./src/css/user-guides.css" /> 
+    <link rel="shortcut icon" href="./src/img/favicon.ico" />
+    <link rel="stylesheet" href="./src/css/fontawesome-free-5.10.0-web/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="node_modules/react-quill/dist/quill.snow.css"> -->
+    <link rel="stylesheet" href="./src/css/monokai-sublime.min.css">
+    <script defer src="./src/css/fontawesome.js"></script>
+    <link rel="stylesheet" href="./src/css/ReactToastify.css"></style>
+    <style>
+      @import "./src/css/css.css";
+
+      .ql-snow .ql-editor pre.ql-syntax {
+        background-color: black; /* <== change this color */ 
+        color: #f8f8f2;
+        overflow: visible;
+      }
+
+      .ql-snow .ql-stroke {
+        stroke: white;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #fafafa;
+      }
+
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.1em;
+        font-weight: 300;
+        line-height: 1.7em;
+        color: #999;
+      }
+
+      a,
+      a:hover,
+      a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .navbar {
+        padding: 15px 10px;
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 40px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-btn {
+        box-shadow: none;
+        outline: none !important;
+        border: none;
+      }
+
+      .line {
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px dashed #ddd;
+        margin: 40px 0;
+      }
+      .wrapper {
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+      }
+
+      #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #7386d5;
+        color: #fff;
+        transition: all 0.3s;
+      }
+
+      #sidebar.active {
+        margin-left: -250px;
+      }
+
+      #sidebar .sidebar-header {
+        padding: 20px;
+        background: #6d7fcc;
+      }
+
+      #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+      }
+
+      #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+      }
+
+      #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+      }
+
+      #sidebar ul li a:hover {
+        color: #7386d5;
+        background: #fff;
+      }
+
+      #sidebar ul li.active > a,
+      a[aria-expanded="true"] {
+        color: #fff;
+        background: #6d7fcc;
+      }
+
+      a[data-toggle="collapse"] {
+        position: relative;
+      }
+
+      .dropdown-toggle::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+      }
+      ul.CTAs {
+        padding: 20px;
+      }
+
+      ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      a.download {
+        background: #fff;
+        color: #7386d5;
+      }
+
+      a.article,
+      a.article:hover {
+        background: #6d7fcc !important;
+        color: #fff !important;
+      }
+
+      #content {
+        width: 100%;
+        padding: 20px;
+        min-height: 100vh;
+        transition: all 0.3s;
+      }
+
+      @media (max-width: 768px) {
+        #sidebar {
+          margin-left: -250px;
+        }
+        #sidebar.active {
+          margin-left: 0;
+        }
+        #sidebarCollapse span {
+          display: none;
+        }
+      }
+      #app {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body id="body_wrapper">
+  	<div class="complete-page-loader" style="display: none;"></div>
+    <div id="app"></div>
+    <!-- <div class="footer">
+    	&copy; Copyright Cloud4c services Pvt Ltd 2021-2022.
+    </div> -->
+    <!-- <script src="./src/css/jquery-3.3.1.slim.min.js"></script> -->
+    <script src="./src/js/jquery-3.1.0.js"></script>
+    <script src="./src/css/popper.min.js"></script>
+    <script src="./src/css/bootstrap.min.js"></script>
+    <!-- <script defer src="./src/js/jquery.dcjqaccordion.2.7.js"></script> -->
+    <!-- <script defer src="./src/js/jquery.nicescroll.js"></script>
+    <script defer src="./src/js/jquery.scrollTo.min.js"></script> -->
+    <script defer src="./src/js/user-guides-custom.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#sidebarCollapse").on("click", function() {
+          $("#sidebar").toggleClass("active");
+        });
+        
+        $('nav#menu li:has(ul)').on('click',function(){
+            $(this).toggleClass('open');
+        });
+        
+        $('a#toggle').on('click',function(e){
+            $('html').toggleClass('open-menu');
+            $(this).children('.lineicon, .closeicon').toggleClass("lineicon fa-times closeicon");
+            return false;
+        });
+        
+        
+        $('div#overlay').on('click',function(){
+            $('html').removeClass('open-menu');
+            $('#toggle i').removeClass('closeicon');
+            $('#toggle i').addClass('lineicon');
+        })
+
+      });
+    </script>
+  </body>
+</html>

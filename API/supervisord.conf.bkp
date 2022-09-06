@@ -1,0 +1,16 @@
+[supervisord]
+nodaemon=true
+
+[program:API]
+priority=1
+command=forever start /var/www/html/app.js
+autorestart=false
+
+[program:azure_schedular]
+priority=2
+command=forever start /var/www/html/azure_schedular.js
+autorestart=false
+
+[program:sshd]
+command=/etc/init.d/ssh start
+autorestart=false

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "node-schedule-tz": "^1.2.1-4"
+  }
+}

@@ -1,0 +1,8 @@
+.htaccess
+.project
+.buildpath
+reports
+#http://localhost:9891/download/reports?file=index.html
+node_modules
+Dockerfile
+supervisord.conf

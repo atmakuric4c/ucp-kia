@@ -1,0 +1,24 @@
+FROM node:14
+ENV TZ=Asia/Kolkata
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+WORKDIR /app
+RUN apt-get update && curl -sL https://deb.nodesource.com/setup_14.x | bash - && apt-get update && apt-get install vim -y && apt-get install -y build-essential && apt-get install -y nodejs && apt-get install supervisor -y && apt-get install openssh-server -y && echo "root:Docker!" | chpasswd
+COPY . .
+RUN mkdir -p /var/log/supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY sshd_config /etc/ssh/
+#COPY startup.sh /bin
+RUN npm install
+RUN npm audit fix --force
+RUN npm install nodemon -g
+#RUN npm install forever -g
+RUN npm install pm2 -g
+RUN pm2 install pm2-logrotate
+RUN pm2 set pm2-logrotate:rotateInterval 0 0 * * 0
+RUN chmod -R 777 img reports
+EXPOSE 80 8080 9891 22 2222
+#RUN chmod 755 /bin/startup.sh
+CMD ["/usr/bin/supervisord", "-n"]
+#CMD ["pm2-runtime", "process.yml"]
+#ENTRYPOINT ["/bin/startup.sh"]
+#CMD ["forever","app.js"]

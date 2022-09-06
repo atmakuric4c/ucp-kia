@@ -1,0 +1,49 @@
+.faq {
+ padding-bottom: 66px
+}
+
+.faq .sub-heading {
+ color: #f4cc07;
+ text-align: center;
+ margin-bottom: 35px;
+ margin-top: 20px;
+}
+
+.faq .search-input {
+ 
+ padding: 12px 72px 12px 12px;
+ border: 1px solid #cccc;
+ border-radius: 6px;
+
+}
+
+.faq .search-input:focus {
+ outline:none;
+}
+
+.faq .accordion {
+ width: 66%;
+}
+
+.faq .accordion__button {
+ padding: 12px 60px 6px 12px !important;
+ position: relative;
+ font-weight: 500;
+}
+
+.faq .accordion__button[aria-expanded='true'],.faq .accordion__panel {
+background: #e8f1fd !important;
+}
+.faq .accordion__button:before {
+ position : absolute;
+ right:0;
+ width:7px;
+ height:7px;
+ /* transform: rotate(45deg) */
+}
+.faq .accordion__panel {
+ padding: 7px 13px;
+}
+.faq .accordion__panel p {
+ color: black;
+}

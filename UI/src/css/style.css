@@ -1,0 +1,348 @@
+body {
+    background: #edecec;
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: #003ec8;
+}
+
+header, .header {
+    background: #fff;
+    padding: 1rem 15px;
+}
+.lineicon, .closeicon {
+    font-size: 1.789rem;
+    transform: translateY(5px);
+}
+#backupjob tr:hover{
+	background-color: #fff !important;
+}
+#backupjob table{
+	width:100%;
+}
+#backupjob td{
+	font-size: 12px;
+}
+div#overlay {
+    display: none;
+}
+a#toggle {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    top: 10px;
+    text-align: center;
+    color: white;
+    display: none;
+    transition: all ease-out 0.3s;
+    right: 20px;
+    background: #003ec8;
+}
+.h2block{
+	width:30%;
+	float:left;
+}
+.main-menu {
+    background: #003ec8;
+    color: #fff;
+    padding:0 15px;
+    color: #fff;
+    position: relative;
+}
+.main-menu a {
+    color: #fff;
+}
+.main-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.main-menu ul > li {
+    display: inline-block;
+}
+.main-menu ul > li > a,.main-menu ul > li > div >  a {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+#menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 44px;
+    width: 180px;
+    text-align: left;
+    background: #0036ad;
+    z-index: 20;
+}
+#menu ul li ul li {
+    display: block;
+}
+#menu ul li ul li a {
+	display: block;
+	font-size: 12px;
+}
+#menu ul li .fa-chevron-right {
+    transform: rotateZ(90deg);
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#menu ul li:hover > a {
+}
+
+#menu ul li:hover ul {
+    display: block;
+}
+.btn {
+    padding: .3rem .75rem;
+}
+.btn-blue {
+    background-color: #003ec8;
+    color: #fff;
+    min-width: 100px;
+}
+.btn-blue:hover {
+    background-color: #0548dc;
+    color: #fff;
+}
+.main-body {
+    background: #f5f6f9;
+    padding: 15px;
+}
+.contentarea {
+    background: #fff;
+    padding: 15px;
+}
+h1 {
+    color: #003ec8;
+    font-size: 2rem;
+    line-height: 1.345;
+}
+h2 {
+    color: #003ec8;
+    font-size: 2rem;
+    line-height: 1.345;
+}
+.blue-col {
+    color: #003ec8;
+}
+.alert-middle{
+	margin: 1% 20%; font-size: 30px;color: red;
+}
+.title {
+    border-bottom: 1px solid #929292;
+    padding-bottom: .5rem;
+}
+@media screen and (max-width: 768px) {
+    #menu {
+		text-align: left;
+		transition: all ease-out 0.3s;
+		width: 75%;
+		float: left;
+	}
+
+	a#toggle {
+		display: block;
+	}
+
+	#menu {
+		position: fixed;
+		width: 345px;
+		height: 100%;
+		top: 0px;
+		left: 0;
+		overflow: hidden;
+		overflow-y: auto;
+		background-color: #181819;
+		transform: translateX(-350px);
+	}
+	#menu > ul {
+		text-align: left;
+		background-color: #181819;
+		margin-top: 25px;
+	}
+	#menu ul > li {
+		display: block;
+		margin: 4px;
+	}
+	#menu ul > li ul li {
+		display: block;
+		margin: 0;
+	}
+	#menu ul li a {
+		display: block;
+		font-size: 14px;
+		color:#fff;
+	}
+
+	#menu ul li ul {
+		display: none;
+		position: static;
+		width: 100%;
+		background-color: rgba(22,160,133, 0.2);
+	}
+	#menu ul li:hover > ul {
+		display: none;
+    }
+    #menu ul li .fa-chevron-right {
+        transform: rotateZ(0);
+    }
+
+	#menu ul li:hover > a > i {
+		transform: rotateZ(0);
+	}
+	#menu ul li.open > a {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	#menu ul li.open > a > .fa-chevron-right {
+		transform: rotateZ(90deg);
+	}
+	#menu ul li.open > ul {
+		display: block;
+	}
+	#menu a.active {
+		border: none!important;
+		color: #4f82f3;
+	}
+	div#overlay {
+		display: block;
+		visibility: hidden;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		transition: all ease-out 0.3s;
+		z-index: 2000;
+		opacity: 0;
+	}
+	html.open-menu {
+		overflow: hidden;
+	}
+	html.open-menu div#overlay {
+		visibility: visible;
+		opacity: 1;
+		width: calc(-150%);
+		left: 160px;
+	}
+	html.open-menu a#toggle, html.open-menu main#content {
+		transform: translateX(0px);
+		z-index: 1000;
+	}
+	html.open-menu nav#menu {
+		z-index: 3;
+		transform: translateX(0);
+	}
+
+}
+.dataTables_filter{float:right;color:transparent;}
+.pagination{float:right;}
+.pagination > .active{
+	z-index: 0;
+}
+.ticket_box{
+	float: left;
+    display: block;
+	border: 2px solid #f1f1f1;
+	margin-bottom: 10px;
+	padding: 0;
+}
+.box_left_border{
+	border-left: 2px solid #f1f1f1;
+	padding: 10px;
+}
+.ptop{
+	border-bottom: 1px solid #f1f1f1;
+}
+.pbottom{
+	border-top: 1px solid #f1f1f1;
+	margin:0px;
+}
+.fullname{
+	padding-top:10px;
+}
+.fullname > i{
+	font-size:14px;
+}
+tbody + thead{
+	display: none;
+ }
+ .redcolor{
+	 color:red;
+ }
+ #menu > ul > li > a{
+	 cursor: pointer;
+ }
+ .customBlk{
+	display: block;
+	margin: auto;
+	width: 35%;
+	border: 1px solid #4c4c4c;
+	/* padding: 1rem; */
+	border-radius: 5px;
+	color: #fff;
+ }
+ .customBlk__head {
+    transition: left 0.3s, right 0.3s, height 0.3s;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 15px;
+    border-bottom: 1px solid #4c4c4c;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.customBlk__body {
+	padding: 1rem;
+}
+.customBlk__head .customBlk__head-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.678rem;
+    font-weight: 500;
+    color: #003ec8;
+}
+ .help-block{color:red;}
+ .cursor{cursor:pointer;}
+ .cursorpointer{cursor:pointer;margin-right:20px !important;}
+ .cursor:hover{background-color:rgb(4, 0, 255);color:#fff;}
+ #vmdetails{
+	padding: 10px;
+    display: block;
+    border: 1px solid #93af93;
+    float: left;
+    background: #fff;
+}
+.wordwrap{word-wrap: break-word;}
+.eachRow{
+	margin: 10px;
+    float: left;
+    border-bottom: 1px solid #edf1ed;
+}
+.btn-squared-default {
+    font-size: 10px;
+    font-weight: bold;
+    height: 70px !important;
+    margin: 5px 5px 10px;
+    padding: 2px;
+	width: 72px !important;
+	border-radius: 20px;
+    box-sizing: border-box;
+    border-width: 2px;
+    background-color: transparent;
+}
+.btn-squared-default:hover {
+    border: 3px solid white;
+    font-weight: 800;
+	padding: 5px;
+	color:#fff !important;
+}
+.cursorpointer2{cursor:pointer;}
+.cursorpointer2 > i,span{
+	color:#fff;
+}
+.margin-b-5{margin-bottom: 5px;}
+
