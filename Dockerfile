@@ -27,6 +27,6 @@ RUN npm install nodemon -g
 RUN npm install pm2 -g
 RUN pm2 install pm2-logrotate
 RUN pm2 set pm2-logrotate:rotateInterval 0 0 * * 0
-RUN chmod -R 777 img reports
+#RUN chmod -R 777 img reports
 EXPOSE 80 8080 9891 22 2222
 CMD ["/usr/bin/supervisord", "-n"]
