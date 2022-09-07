@@ -83,9 +83,9 @@ app.use(cookieSession({
     var corsWhitelist = env.env === 'dhlonprem' ? [
       'ucp.dhl.com', '10.156.8.9', '10.156.8.6', '10.224.2.132',
       '10.224.2.135', '10.234.14.17', '10.156.8.15', '10.156.8.22',
-      '10.156.8.24'
+      '10.156.8.24', 'https://c4cucpdemo.azurewebsites.net'
      ] : [
-      'demoucp.cloud4c.com', '10.224.2.154', '10.224.2.153'
+      'demoucp.cloud4c.com', '10.224.2.154', '10.224.2.153', 'https://c4cucpdemo.azurewebsites.net'
     ],
     origin = (req.headers.origin || req.headers['x-forwarded-host'] || '');
     
